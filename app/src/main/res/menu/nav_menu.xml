@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_one"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_gank"
+            android:icon="@drawable/cross"
+            android:title="@string/gank" />
+        <item
+            android:id="@+id/nav_girl"
+            android:icon="@drawable/girl"
+            android:title="@string/girl" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about"
+            android:title="@string/about" />
+    </group>
+
+    <group
+        android:id="@+id/group_two"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_set"
+            android:icon="@drawable/setting"
+            android:title="@string/set" />
+        <item
+            android:id="@+id/nav_other"
+            android:icon="@drawable/setting"
+            android:title="@string/other" />
+    </group>
+
+</menu>

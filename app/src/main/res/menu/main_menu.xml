@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/share"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_share_two"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/main_menu_search"
+        app:showAsAction="always" >
+        <menu>
+            <item
+                android:id="@+id/create_new"
+                android:orderInCategory="200"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="新建文件"/>
+            <item
+                android:id="@+id/open"
+                android:orderInCategory="300"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="打开文件"/>
+        </menu>
+        </item>
+</menu>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/mlayout"
+    android:layout_height="match_parent">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_height="match_parent">
+       <Button
+           android:id="@+id/btn_1"
+           android:layout_width="match_parent"
+           android:text="显示状态栏"
+           android:layout_height="50dp" />
+       <Button
+           android:id="@+id/btn_2"
+           android:layout_width="match_parent"
+           android:text="隐藏状态栏"
+           android:layout_height="50dp" />
+       <Button
+           android:id="@+id/btn_3"
+           android:layout_width="match_parent"
+           android:text="Activity全屏显示，且状态栏被隐藏覆盖掉。 "
+           android:layout_height="50dp" />
+       <Button
+           android:id="@+id/btn_4"
+           android:layout_width="match_parent"
+           android:text="Activity全屏显示，但状态栏不会被隐藏覆盖，状态栏依然可见，Activity顶端布局部分会被状态遮住  "
+           android:layout_height="50dp" />
+       <Button
+           android:id="@+id/btn_5"
+           android:layout_width="match_parent"
+           android:text="隐藏虚拟按键(导航栏)  "
+           android:layout_height="50dp" />
+       <Button
+           android:id="@+id/btn_6"
+           android:layout_width="match_parent"
+           android:text="状态栏显示处于低能显示状态(low profile模式)，状态栏上一些图标显示会被隐藏."
+           android:layout_height="50dp" />
+   </LinearLayout>
+</RelativeLayout>

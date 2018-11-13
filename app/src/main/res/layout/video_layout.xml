@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <cn.jzvd.JZVideoPlayerStandard
+        android:id="@+id/videoplayer"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <master.flame.danmaku.ui.widget.DanmakuView
+        android:id="@+id/danmaku_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:id="@+id/cardview_return"-->
+        <!--android:background="@color/cardview_shadow_end_color"-->
+        <!--android:layout_height="40dp">-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:text="点击跳转"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_height="wrap_content" />-->
+    <!--</android.support.v7.widget.CardView>-->
+</RelativeLayout>
