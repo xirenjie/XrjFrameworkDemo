@@ -71,7 +71,7 @@ public class WsManager {
     private AtomicLong seqId = new AtomicLong(SystemClock.uptimeMillis());//每个请求的唯一标识
 
     private String token="eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0bmFtZSIsInVzZXJJZCI6IjIiLCJuYW1lIjoi5L-u5pS55pi156ewMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIiwiZXhwIjoxNTM5OTUxMzc2fQ.RPiLlSerWPPSBfp0PYC9kz8vidYhoEAn7dC9Fc0GEMwoGO2AAk0tWZdT3sYzlPXJau4_HSGft4f4ywgEMLp9KxAvwRozg5KIZ606r4psUQfP-O4zOiS4HwKHpBXvKrn_r0q_sQXnEdw7BNJXt7w66UCb-r4gc-KVtycq-RHdfkI";
-    private String group_id;
+    //private String group_id;
 
     private WsManager() {
     }
@@ -106,7 +106,7 @@ public class WsManager {
 
     public void init(Context mcontext,String ipstr,String username,String password) {
         this.mcontext = mcontext;
-        this.group_id=password;
+        //this.group_id=password;
         initconn(ipstr,username,password);
     }
 
@@ -348,7 +348,7 @@ public class WsManager {
     public void sendGrouptext(String content, String username, String createTime,String msgtype,String imgurl,String leave,String nick) {
         // String str="{\"command\":11,\"data\":{\"chatType\":2,\"cmd\":11,\"content\":\"hahahahahaha\",\"createTime\":1527133207581,\"from\":\"1527126464114\",\"id\":\"ee7b9c37dcb548cd826ddb0a1ce5cf28\",\"msgType\":0,\"to\":\"xirenjie\"}}";
         //String str="{\"command\":11,\"data\":{\"chatType\":1,\"cmd\":11,\"content\":\"hahahah\",\"createTime\":1527126807475,\"from\":\"xirenjie\",\"group_id\":\"100\",\"id\":\"70393dc01fec4996aabb61496218s37d\",\"msgType\":0}}";
-        String str = "{\"from\": \"" + username + "\",\"createTime\":" + createTime + ",\"cmd\":11,\"group_id\":\""+group_id+"\",\"chatType\":\"1\",\"msgType\":\"0\",\"content\": \"" + content + "\"}";
+        //String str = "{\"from\": \"" + username + "\",\"createTime\":" + createTime + ",\"cmd\":11,\"group_id\":\""+group_id+"\",\"chatType\":\"1\",\"msgType\":\"0\",\"content\": \"" + content + "\"}";
         GroupSendBean groupBean = new GroupSendBean();
         groupBean.setChatType("1");
         groupBean.setCmd(11);
@@ -400,7 +400,7 @@ public class WsManager {
         if(authResponseBean.getCode()==10009)
         {
             L.i(authResponseBean.getMsg());
-            ApplyGroup();
+            //ApplyGroup();
             startHeartbeat();
         }
     }
@@ -422,7 +422,7 @@ public class WsManager {
     /**
      * 申请入群
      */
-    private void ApplyGroup()
+    public void ApplyGroup(String group_id)
     {
         String str= "{\"cmd\":7,\"group_id\":\""+group_id+"\"}";
         Gson gson=new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_DASHES).create();
